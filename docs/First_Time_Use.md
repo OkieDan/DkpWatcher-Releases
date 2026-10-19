@@ -135,7 +135,15 @@ auctions. Continue below if you want to use the optional tools.
 
 ## 6. Enable the optional tools
 
-Open **Settings** and scroll down to **Tools**. Each checkbox enables its tool
+The **Options** section just above **Other Tools** controls two optional navigation
+buttons. Check **Restricted Item Alerts** to show **Restricted Items**, or
+**Show Auction History for This Session** to show **History**. Both are unchecked
+by default, and your choices are saved for future launches.
+Unchecking either option hides its button. Existing restricted items still
+trigger their configured TTS/sound alerts, and auction history continues to be
+recorded for the current session while its button is hidden.
+
+Open **Settings** and scroll down to **Other Tools**. Each checkbox enables its tool
 and adds a button to the top navigation:
 
 | Settings checkbox | Navigation button | What it needs |
@@ -143,7 +151,7 @@ and adds a button to the top navigation:
 | **Enable CH Overlay** | **CH** | An active **Mayhem** connection, EverQuest running, and EQ logging enabled. This checkbox appears only while connected to Mayhem. |
 | **Pet Tools** | **Pets** | EverQuest running with Zeal pipe data available. It works without an OpenDKP connection and does not use the EQ log directory. |
 
-![Settings Tools section with Enable CH Overlay and Pet Tools checked](images/first-time-use/06-settings-tools.png)
+![Settings Other Tools section with Enable CH Overlay and Pet Tools checked](images/first-time-use/06-settings-tools.png)
 
 *Both tools are enabled in this example. Enable only the ones you want to use.*
 
@@ -158,7 +166,7 @@ the Windows audio output you intend to use while playing.
 ## 7. Set up CH Overlay and EQ logs
 
 CH Overlay displays timers based on CH announcements written to your local EQ
-log. Connect to **Mayhem**, enable **Settings → Tools → Enable CH Overlay**,
+log. Connect to **Mayhem**, enable **Settings → Other Tools → Enable CH Overlay**,
 then click **CH** in the top navigation.
 
 ### Turn on EQ logging and choose the folder
@@ -228,7 +236,7 @@ EQ character and their group. You can use it with any character class.
 
 1. Run EQ with your server's supported **Zeal** installation. DKP Watcher needs
    its local pipe data; no EQ log-directory selection is needed for this tool.
-2. Enable **Settings → Tools → Pet Tools** and click **Pets** along the top.
+2. Enable **Settings → Other Tools → Pet Tools** and click **Pets** along the top.
 3. Choose **Character to monitor**. A single detected character is selected
    automatically; with multiple EQ clients, select the one whose group you want
    to monitor.
@@ -290,12 +298,11 @@ lets you stop those attempts.
 | The password box is empty after reopening Manage. | This can be normal for a saved password. Use the red message in Settings to check whether credentials are missing. |
 | **Connected**, but no auctions appear. | The server may have no active auctions. You do not need to reconnect just because the board is empty. |
 | The app says **Reconnecting**. | Allow it to recover. To change credentials or reconnect manually, use **Stop reconnecting**, then **Manage** or **Connect**. |
-| You see **Quarm Mayhem** instead of **Mayhem**. | That is the older name for the same server. Use the top **Settings** button if your version does not have the inline Settings link. |
-| **Enable CH Overlay** or the **CH** button is missing. | Connect to **Mayhem**. Then enable **Settings → Tools → Enable CH Overlay**. The option is unavailable on Demo and while disconnected. |
+| **Enable CH Overlay** or the **CH** button is missing. | Connect to **Mayhem**. Then enable **Settings → Other Tools → Enable CH Overlay**. The option is unavailable on Demo and while disconnected. |
 | CH log-directory status reports a missing folder or no files. | Turn on `/log on` in EQ and select the folder actually containing `eqlog_*.txt` files. The app does not search subfolders. |
 | **Test Overlay** works, but live CH timers do not. | Confirm the active EQ log is receiving new lines and that new CH announcements match the configured expression. The test does not read the logs. |
 | The overlay is invisible. | Keep EQ open and not minimized, check **Show CH overlay**, and try **Test Overlay**. Check position/size and foreground visibility; the overlay is blank when it has no active rows. |
-| The **Pets** button is missing. | Enable **Settings → Tools → Pet Tools**. This does not require an OpenDKP connection. |
+| The **Pets** button is missing. | Enable **Settings → Other Tools → Pet Tools**. This does not require an OpenDKP connection. |
 | Pets says **Waiting for EQ characters with Zeal pipe telemetry.** | Make sure EQ and Zeal are running and supplying pipe data. The app retries discovery automatically. |
 | No spoken pet alerts. | Select the intended character, check **Monitoring…**, and try **Test TTS** in Settings. Alerts need a new threshold crossing after the baseline is established. |
 

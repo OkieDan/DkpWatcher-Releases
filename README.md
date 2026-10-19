@@ -1,7 +1,7 @@
 # DKP Watcher
 
-DKP Watcher is a Windows desktop app for following OpenDKP auctions, displaying
-CH timers over EverQuest, and receiving spoken pet alerts.
+DKP Watcher is a Windows desktop app for following OpenDKP auctions for the Mayhem guild on Project Quarm, displaying
+CH timers over EverQuest, and receiving spoken pet alerts for pets needing healed or charm breaks.
 
 **New here? Start with the illustrated [first-time setup guide](docs/First_Time_Use.md).**
 It covers installation, saving your OpenDKP login, connecting, CH log setup,
@@ -39,7 +39,7 @@ complete walkthrough and screenshots.*
 
 ## Optional tools
 
-Enable tools under **Settings → Tools**:
+Enable tools under **Settings → Other Tools**:
 
 - **Enable CH Overlay** adds the **CH** button. It requires a Mayhem connection
   and local EQ logs. Follow the [CH Overlay and log setup](docs/First_Time_Use.md#7-set-up-ch-overlay-and-eq-logs).

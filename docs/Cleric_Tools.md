@@ -1,6 +1,6 @@
 # Pet Tools
 
-Enable **Pet Tools** under **Settings → Tools** to show the **Pets**
+Enable **Pet Tools** under **Settings → Other Tools** to show the **Pets**
 button in the top navigation and start local Zeal monitoring. The tool does not
 require an OpenDKP connection. Turn it off to stop monitoring and cancel queued
 pet alerts.
