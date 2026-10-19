@@ -46,5 +46,11 @@ Enable tools under **Settings → Other Tools**:
 - **Pet Tools** adds the **Pets** button for spoken pet alerts using local Zeal
   data. Follow the [Pets setup](docs/First_Time_Use.md#8-set-up-pets).
 
+### CH overlay in action
+
+![Animated CH overlay showing moving heal timers, colored gaps, and an interrupted cast](docs/images/ch-overlay-demo.gif)
+
+*An ultra-low-resolution 16-second looping example using the actual overlay with fictional casts.*
+
 For help with first-run problems, see
 [Troubleshooting](docs/First_Time_Use.md#if-something-does-not-work).
