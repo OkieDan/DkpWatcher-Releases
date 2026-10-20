@@ -23,6 +23,13 @@ choose the versioned MSI or app ZIP to get DKP Watcher.
 Both downloads require the **.NET 10 Desktop Runtime for Windows x64**, available
 from [Microsoft's .NET download page](https://dotnet.microsoft.com/en-us/download/dotnet/10.0).
 
+DKP Watcher is proprietary, closed-source software. The [binary license](LICENSE.txt)
+allows free use, including business use, and free redistribution of unmodified
+binaries with their license notices. Charging for the app, access to it, or its
+distribution is prohibited. Third-party components retain their own terms in
+[Third-party notices](THIRD-PARTY-NOTICES.txt). Both files accompany the installed
+application and standalone ZIP.
+
 ## Get connected
 
 1. Install and open DKP Watcher.
