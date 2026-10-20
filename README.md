@@ -37,6 +37,28 @@ The server profiles are already supplied. On a fresh start, **Mayhem** is select
 *Example view from the app. See the [setup guide](docs/First_Time_Use.md) for the
 complete walkthrough and screenshots.*
 
+## Auctions and proxy bidding
+
+Select an auction on the left to see its bids and remaining time on the right.
+In **Place a bid**, choose your **Character** and **Rank**, then enter an
+**Amount / proxy maximum**.
+
+![Auction window showing the Amount / proxy maximum field and Proxy Bid button to the right of Bid](docs/images/first-time-use/auction-proxy-bid.png)
+
+*The **Proxy Bid** button is at the top right of the bidding panel, beside
+**Bid**. Enter the most DKP you want to spend in **Amount / proxy maximum**,
+then click **Proxy Bid** to enable automatic bidding up to that limit.*
+
+- **Bid** submits the entered amount once.
+- **Proxy Bid**, to the right of **Bid**, uses the entered amount as your
+  **maximum**, not your starting bid. It bids automatically as needed, increasing
+  by 1 DKP above the highest observed bid while staying within your maximum,
+  available DKP, and auction/rank limits. It waits while your character is an
+  anticipated winner or another character you own leads the auction.
+- Use **Stop Proxy** to cancel automatic bidding. Proxy bidding also stops when
+  the auction closes or you disconnect; keep DKP Watcher open and connected for
+  it to continue.
+
 ## Optional tools
 
 Enable tools under **Settings → Other Tools**:
