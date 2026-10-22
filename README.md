@@ -70,10 +70,17 @@ then click **Proxy Bid** to enable automatic bidding up to that limit.*
 
 Enable tools under **Settings → Other Tools**:
 
+- **Enable PoP Flags** adds the **PoP** button, an opt-in Alpha tracker for Quarm
+  progression. It works without an OpenDKP connection. See
+  [PoP Flags Alpha setup](docs/First_Time_Use.md#pop-flags-alpha).
 - **Enable CH Overlay** adds the **CH** button. It requires a Mayhem connection
   and local EQ logs. Follow the [CH Overlay and log setup](docs/First_Time_Use.md#7-set-up-ch-overlay-and-eq-logs).
 - **Pet Tools** adds the **Pets** button for spoken pet alerts using local Zeal
   data. Follow the [Pets setup](docs/First_Time_Use.md#8-set-up-pets).
+
+Choose the shared **EQ log directory** in **Settings**, directly above **Theme**.
+CH Overlay and PoP Flags both use it; the folder is no longer configured in CH.
+App screenshots in this guide use dark mode.
 
 ### CH overlay in action
 

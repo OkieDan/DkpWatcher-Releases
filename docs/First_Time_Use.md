@@ -1,13 +1,13 @@
 # DKP Watcher: first-time setup
 
 This guide takes you from the downloaded Windows installer to a connected auction
-board, then covers the optional CH Overlay and pet alerts. Have your **OpenDKP
+board, then covers the optional CH Overlay, PoP Flags tracker, and pet alerts. Have your **OpenDKP
 username and password for your server** ready. The tools also need EverQuest
 running; Pets requires Zeal.
 
 The app images below are rendered from the current interface with fictional
-example data. Window title bars are omitted, and your Windows theme may look
-different.
+example data in dark mode. Window title bars are omitted. Choose your preferred
+appearance under **Settings → Theme**; the screenshots do not change your theme.
 
 Jump to: [Installation](#1-install-dkp-watcher) ·
 [Login](#3-choose-your-server) · [Tools](#6-enable-the-optional-tools) ·
@@ -148,16 +148,37 @@ and adds a button to the top navigation:
 
 | Settings checkbox | Navigation button | What it needs |
 | --- | --- | --- |
+| **Enable PoP Flags** | **PoP** | Quarm progression output in EQ logs. Alpha feature, off by default; it works without an OpenDKP connection. |
 | **Enable CH Overlay** | **CH** | An active **Mayhem** connection, EverQuest running, and EQ logging enabled. This checkbox appears only while connected to Mayhem. |
 | **Pet Tools** | **Pets** | EverQuest running with Zeal pipe data available. It works without an OpenDKP connection and does not use the EQ log directory. |
 
-![Settings Other Tools section with Enable CH Overlay and Pet Tools checked](images/first-time-use/06-settings-tools.png)
+![Dark-mode Settings Other Tools section with its description under the heading, PoP Flags off, and CH Overlay and Pet Tools checked](images/first-time-use/06-settings-tools.png)
 
-*Both tools are enabled in this example. Enable only the ones you want to use.*
+*CH Overlay and Pet Tools are enabled in this example; PoP Flags is off. Enable
+only the tools you want to use.*
 
 Uncheck a tool to stop it and hide its navigation button. Changes save
 automatically. CH stops when the Mayhem connection is lost; Pets can continue
-monitoring independently.
+monitoring independently. Turning off PoP Flags retains saved flags and overrides
+and leaves CH log monitoring active if CH is enabled.
+
+The shared **EQ log directory** is higher up on **Settings**, directly above
+**Theme**. CH Overlay and PoP Flags use the same folder; it is not configured in
+the CH view. Existing CH folder settings migrate automatically.
+
+### PoP Flags Alpha
+
+Choose the shared log folder above **Theme**, enable **Other Tools → Enable PoP
+Flags**, and open **PoP** in the top navigation. Follow **Update your flags
+in game** in that view: reconcile stored memories at the Seer, visit Grand
+Librarian Maelin, revisit as needed while new flags are granted, then capture
+`guided meditation` and `#popflags 1` through `#popflags 5`.
+
+Choose **All** to compare characters, or select a character for its **Access** and
+**Progression** rows and tier-by-zone checklist. Hover a square for entry
+requirements or completed/missing flags. Blue progression numbers count completed
+flags; green completed zones have no number. Unverified credit stays distinct
+from missing credit. Flag detection and guidance are still being validated.
 
 Before setting up spoken pet alerts, choose **TTS Voice** and **TTS Speed** higher
 up in Settings, then click **Test TTS**. Make sure you can hear the test through
@@ -167,15 +188,16 @@ the Windows audio output you intend to use while playing.
 
 CH Overlay displays timers based on CH announcements written to your local EQ
 log. Connect to **Mayhem**, enable **Settings → Other Tools → Enable CH Overlay**,
-then click **CH** in the top navigation.
+then configure the shared log folder in **Settings** as described below. Open
+**CH** afterwards for the overlay's appearance, regex and test controls.
 
 ### Turn on EQ logging and choose the folder
 
 1. Log into your EQ character and enter `/log on` in the game's chat input.
 2. Locate the folder where that EQ client writes files named `eqlog_*.txt`, such
-   as `eqlog_Examplehealer_quarm.txt`.
-3. In DKP Watcher's **CH Overlay** view, click **Browse...** beside
-   **EQ log directory** and select that folder.
+   as `eqlog_Examplehealer_pq.proj.txt`.
+3. In DKP Watcher's **Settings** page, find **EQ log directory** directly above
+   **Theme**, click **Browse...**, and select that folder.
 4. Check the status message below the path.
 
 Choose the **folder containing the files**, rather than a single log file or its
@@ -186,15 +208,22 @@ another control to apply it.
 
 | Log-directory message | Meaning / next step |
 | --- | --- |
-| **EQ Log Directory NOT set.** | Choose the folder with **Browse...**. |
-| **EQ Log Directory not found.** | Check the path and that the folder is accessible. |
-| **No eqlog_*.txt files found yet.** | The folder exists, but no matching log files were found. Check logging in EQ and whether you selected the right folder. |
-| **Watching EQ logs.** | The selected folder contains matching log files. Confirm your active character's file is receiving new lines. |
+| **EQ log directory not configured** | Choose the folder with **Browse...** above **Theme** in Settings. |
+| **EQ log directory unavailable** | Check the path and that the folder is accessible. |
+| **Idle** | The folder is configured, but no active tool is currently using it. Enable CH while connected to Mayhem, or enable PoP Flags. |
+| **Idle; no matching log files** | No tool is monitoring and the selected folder has no matching logs. Check logging and the selected folder. |
+| **Monitoring; no matching log files yet** | Monitoring is active, but the folder has no `eqlog_*.txt` files yet. Check logging and the selected folder. |
+| **Monitoring EQ logs** | The shared monitor is active. Confirm your character's log is receiving new lines. |
 
-![CH Overlay view showing the EQ log directory, CH regex, display options, and Test Overlay button](images/first-time-use/07-ch-overlay-settings.png)
+![Dark-mode shared EQ log directory controls in Settings, directly above Theme](images/first-time-use/09-settings-eq-logs.png)
 
 *Use your own EQ log directory. The illustrated path and successful status are
 example data.*
+
+Return to **CH** to configure and test the overlay. Its view points you back to
+Settings for the shared log folder.
+
+![Dark-mode CH Overlay view with its Settings reminder, CH regex, display options, and Test Overlay button](images/first-time-use/07-ch-overlay-settings.png)
 
 ### Test the overlay
 
@@ -299,7 +328,8 @@ lets you stop those attempts.
 | **Connected**, but no auctions appear. | The server may have no active auctions. You do not need to reconnect just because the board is empty. |
 | The app says **Reconnecting**. | Allow it to recover. To change credentials or reconnect manually, use **Stop reconnecting**, then **Manage** or **Connect**. |
 | **Enable CH Overlay** or the **CH** button is missing. | Connect to **Mayhem**. Then enable **Settings → Other Tools → Enable CH Overlay**. The option is unavailable on Demo and while disconnected. |
-| CH log-directory status reports a missing folder or no files. | Turn on `/log on` in EQ and select the folder actually containing `eqlog_*.txt` files. The app does not search subfolders. |
+| The log-directory status reports an unavailable folder or no files. | Open **Settings → EQ log directory**, directly above **Theme**. Turn on `/log on` in EQ and select the folder actually containing `eqlog_*.txt` files. The app does not search subfolders. |
+| The **PoP** button is missing. | Enable **Settings → Other Tools → Enable PoP Flags**. It works without an OpenDKP connection; use the shared EQ log directory above **Theme**. |
 | **Test Overlay** works, but live CH timers do not. | Confirm the active EQ log is receiving new lines and that new CH announcements match the configured expression. The test does not read the logs. |
 | The overlay is invisible. | Keep EQ open and not minimized, check **Show CH overlay**, and try **Test Overlay**. Check position/size and foreground visibility; the overlay is blank when it has no active rows. |
 | The **Pets** button is missing. | Enable **Settings → Other Tools → Pet Tools**. This does not require an OpenDKP connection. |
