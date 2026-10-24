@@ -41,6 +41,16 @@ and expand **Assets**. Choose the versioned **`.msi`** for this walkthrough.
 The standalone app **`.zip`** is an alternative that you extract before running;
 the **Source code** archives are not the app installer.
 
+For an installer-based copy, the **Update** action downloads the latest MSI and
+opens Windows Installer after closing the app. Your installation location,
+shortcut choices, and saved settings are preserved. Portable ZIP copies retain
+their download/verify and restart workflow. An older installer-based copy may
+first receive a ZIP update, then offer the matching MSI to refresh its installer.
+
+Uninstalling an installer-based copy removes its entire installation folder,
+including any extra files placed there. Saved settings and protected profiles
+remain separately under `%LOCALAPPDATA%\DkpWatcher`.
+
 ## 2. Open Settings on the first launch
 
 On a fresh installation with no saved settings, the app opens on **Auctions**
@@ -179,6 +189,10 @@ Choose **All** to compare characters, or select a character for its **Access** a
 requirements or completed/missing flags. Blue progression numbers count completed
 flags; green completed zones have no number. Unverified credit stays distinct
 from missing credit. Flag detection and guidance are still being validated.
+
+Completed tiers in **Progression by tier** show **Tier # (required flags complete)**
+and collapse automatically at startup or when new flags complete them. Optional
+keys do not block completion; expand a completed tier to inspect its flags.
 
 Before setting up spoken pet alerts, choose **TTS Voice** and **TTS Speed** higher
 up in Settings, then click **Test TTS**. Make sure you can hear the test through
