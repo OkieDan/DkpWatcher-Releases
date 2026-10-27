@@ -30,6 +30,14 @@ Speech uses **Settings → TTS Voice / TTS Speed**. There is no separate speech
 speed or ignored-player list. Changes apply automatically and reset the alert
 baseline so editing settings cannot announce a historical transition.
 
+All speech-engine operations run on the dedicated `DkpWatcher Speech` background
+thread, separate from WPF's UI/overlay dispatcher and ImGui's render thread.
+This includes engine creation, installed-voice discovery, voice/rate changes,
+playback requests, cancellation, and disposal. Pet alerts, restricted-item speech,
+and settings previews use separate queues on that worker; canceling pet alerts
+does not cancel the other speech sources. Voice discovery populates Settings
+asynchronously. Shutdown awaits worker cleanup without joining it on the UI thread.
+
 The first sample, character switches, zone changes, and reconnections establish
 a new baseline without alerts. Missing or malformed HP is treated as unknown,
 not zero. Group members are matched by name, so moving group slots does not
